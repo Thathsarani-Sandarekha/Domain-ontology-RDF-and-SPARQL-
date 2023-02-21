@@ -1,0 +1,325 @@
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+xmlns:owl="http://www.w3.org/2002/07/owl#"
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:covid="http://www.example.com/covid#">
+
+<!-- OWL Header -->
+<owl:Ontology rdf:about="http://www.example.com/covid"> 
+<dc:title>Coronavirus Ontology</dc:title> 
+<dc:description> An ontology to spread the awareness to the general public about, Coronavirus </dc:description> 
+</owl:Ontology> 
+
+<!-- Define property -->
+<owl:ObjectProperty rdf:about="http://www.example.com/covid#canBePrevented"/> 
+<owl:ObjectProperty rdf:about="http://www.example.com/covid#identifiedIn"/> 
+<owl:ObjectProperty rdf:about="http://www.example.com/covid#firstOutbrakeIn"/> 
+
+<!-- OWL Parent Class Definition - Coronavirus -->
+<owl:Class rdf:about="http://www.example.com/covid#Coronavirus"> </owl:Class> 
+
+<!-- OWL Class Definition - Coronavirus varients -->
+<owl:Class rdf:about="http://www.example.com/covid#Varients"> 
+<rdfs:subClassOf rdf:resource="http://www.example.com/covid#Coronavirus"/>
+    <rdfs:label>The Coronavirus varients</rdfs:label>
+    <rdfs:comment>The class of all Coronavirus types.</rdfs:comment>
+</owl:Class>
+
+<!-- OWL Class Definition - Coronavirus vaccine types -->
+<owl:Class rdf:about="http://www.example.com/covid#VaccineTypes"> 
+<rdfs:subClassOf rdf:resource="http://www.example.com/covid#Coronavirus"/>
+    <rdfs:label>The Vaccine types</rdfs:label>
+    <rdfs:comment>The class of all Vaccine types.</rdfs:comment>
+</owl:Class>
+
+<!-- OWL Class Definition - Symptoms -->
+<owl:Class rdf:about="http://www.example.com/covid#Symptoms"> 
+<rdfs:subClassOf rdf:resource="http://www.example.com/covid#Coronavirus"/>
+    <rdfs:label> Symptoms </rdfs:label>
+    <rdfs:comment>The class of all Symptoms. </rdfs:comment>
+</owl:Class>
+
+<!-- OWL Class Definition - Infection Posibilities -->
+<owl:Class rdf:about="http://www.example.com/covid#InfectionPosibilities"> 
+<rdfs:subClassOf rdf:resource="http://www.example.com/covid#Coronavirus"/>
+    <rdfs:label> Infection Posibilities </rdfs:label>
+    <rdfs:comment>The class of all Infection Posibilities.</rdfs:comment>
+</owl:Class>
+
+<!-- OWL Class Definition - Precautions and Treatments -->
+<owl:Class rdf:about="http://www.example.com/covid#Precautions"> 
+<rdfs:subClassOf rdf:resource="http://www.example.com/covid#Coronavirus"/>
+    <rdfs:label> Precautions and Treatments</rdfs:label>
+    <rdfs:comment>The class of all Precautions.</rdfs:comment>
+</owl:Class>
+
+<!-- OWL Class Definition - Identified Year -->
+<owl:Class rdf:about="http://www.example.com/covid#IdentifiedYear"> 
+<rdfs:subClassOf rdf:resource="http://www.example.com/covid#Coronavirus"/>
+    <rdfs:label> Identified Year </rdfs:label>
+    <rdfs:comment>The class of all coronavirus varients Identified Years.</rdfs:comment>
+</owl:Class>
+
+<!-- OWL Class Definition - First Outbrake -->
+<owl:Class rdf:about="http://www.example.com/covid#FirstOutbrake"> 
+<rdfs:subClassOf rdf:resource="http://www.example.com/covid#Coronavirus"/>
+    <rdfs:label> First Outbrake </rdfs:label>
+    <rdfs:comment>The class of all coronavirus varients Firstly Identified Countries.</rdfs:comment>
+</owl:Class>
+
+<!-- OWL Sub Classes Definition - Coronavirus varients -->
+<rdf:Description rdf:about="http://www.example.com/covid#Covid19">
+<rdfs:label>Covid-19</rdfs:label> 
+<rdf:type rdf:resource="http://www.example.com/covid#Varients"/>
+<covid:firstOutbrakeIn rdf:resource="http://www.example.com/covid#China"/>
+<covid:identifiedIn rdf:resource="http://www.example.com/covid#2019"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#Alpha"> 
+<rdfs:label>Alpha</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#Covid19"/>
+<covid:firstOutbrakeIn rdf:resource="http://www.example.com/covid#UnitedKingdom"/>
+<covid:identifiedIn rdf:resource="http://www.example.com/covid#2020"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#Gamma">
+<rdfs:label>Gamma</rdfs:label> 
+<rdf:type rdf:resource="http://www.example.com/covid#Covid19"/>
+<covid:firstOutbrakeIn rdf:resource="http://www.example.com/covid#Brazil"/>
+<covid:identifiedIn rdf:resource="http://www.example.com/covid#2020"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#Delta">
+<rdfs:label>Delta</rdfs:label> 
+<rdf:type rdf:resource="http://www.example.com/covid#Covid19"/>
+<covid:firstOutbrakeIn rdf:resource="http://www.example.com/covid#India"/>
+<covid:identifiedIn rdf:resource="http://www.example.com/covid#2020"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#Beta">
+<rdfs:label>Beta</rdfs:label> 
+<rdf:type rdf:resource="http://www.example.com/covid#Covid19"/>
+<covid:firstOutbrakeIn rdf:resource="http://www.example.com/covid#SouthAfrica"/>
+<covid:identifiedIn rdf:resource="http://www.example.com/covid#2020"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#Omicron">
+<rdfs:label>Omicron</rdfs:label> 
+<rdf:type rdf:resource="http://www.example.com/covid#Covid19"/>
+<covid:firstOutbrakeIn rdf:resource="http://www.example.com/covid#SouthAfrica"/>
+<covid:identifiedIn rdf:resource="http://www.example.com/covid#2021"/>
+</rdf:Description>
+
+<!-- OWL Sub Class Definition - Coronavirus vaccine types -->
+<rdf:Description rdf:about="http://www.example.com/covid#Pfizer-BioNTechComirnaty">
+<rdfs:label>Pfizer/BioNTech Comirnaty</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#VaccineTypes"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#SII-COVISHIELDandAstraZeneca/AZD1222">
+<rdfs:label>SII/COVISHIELD and AstraZeneca/AZD 1222</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#VaccineTypes"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#Janssen-Ad26.COV2.S">
+<rdfs:label>Janssen/Ad26.COV 2.S</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#VaccineTypes"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#Moderna">
+<rdfs:label>Moderna</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#VaccineTypes"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#Sinopharm">
+<rdfs:label>Sinopharm</rdfs:label>
+<rdf:type rdf:resource="http://www.examle.com/covid#VaccineTypes"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#Sinovac-CoronaVac">
+<rdfs:label>Sinovac-CoronaVac</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#VaccineTypes"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#BharatBiotechBBV152COVAXIN">
+<rdfs:label>Bharat Biotech BBV152 COVAXIN</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#VaccineTypes"/>
+</rdf:Description>
+
+<!-- OWL Sub Class Definition - Infection Posibilities -->
+<rdf:Description rdf:about="http://www.example.com/covid#DropletsOrAerosols">
+<rdfs:label>Droplets or Aerosols</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#InfectionPosibilities"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#SocialGathering">
+<rdfs:label>Social Gathering</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#InfectionPosibilities"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#SurfaceTransmission">
+<rdfs:label>Surface Transmission</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#InfectionPosibilities"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#AirborneTransmission">
+<rdfs:label>Airborne Transmission</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#InfectionPosibilities"/>
+</rdf:Description>
+
+
+<!-- OWL Sub Class Definition - Symptoms -->
+<rdf:Description rdf:about="http://www.example.com/covid#Normal">
+<rdfs:label>General Symptoms</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#Symptoms"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#LongTerm">
+<rdfs:label>Long term Symptoms</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#Symptoms"/>
+</rdf:Description>
+
+<!-- OWL Sub Class Definition - General Symptoms -->
+<rdf:Description rdf:about="http://www.example.com/covid#Headache">
+<rdfs:label>Headache</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#Normal"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#SoreThroat">
+<rdfs:label>Sore throat</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#Normal"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#Coughing">
+<rdfs:label>Coughing</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#Normal"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#ShortnessOfBreath">
+<rdfs:label>Shortness of breath</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#Normal"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#Fever">
+<rdfs:label>Fever</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#Normal"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#Vomiting">
+<rdfs:label>Vomiting</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#Normal"/>
+</rdf:Description>
+
+<!-- OWL Sub Class Definition - Long term Symptoms -->
+<rdf:Description rdf:about="http://www.example.com/covid#MuscleAndJointPains">
+<rdfs:label>Muscle and joint pains</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#Normal"/>
+<rdf:type rdf:resource="http://www.example.com/covid#LongTerm"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#ProblemsWithMemoryAndConcentration">
+<rdfs:label>Problems with memory and concentration</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#LongTerm"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#ChangesToTasteAndSmell">
+<rdfs:label>Changes to taste and smell</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#LongTerm"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#ExtremeFatigue">
+<rdfs:label>Extreme fatigue</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#LongTerm"/>
+</rdf:Description>
+
+<!-- OWL Sub Class Definition - Precautions and Treatments -->
+<rdf:Description rdf:about="http://www.example.com/covid#Vaccination">
+<rdfs:label>Vaccination</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#Precautions"/>
+<covid:canBePrevented rdf:resource="http://www.example.com/covid#DropletsOrAerosols"/>
+<covid:canBePrevented rdf:resource="http://www.example.com/covid#SocialGathering"/>
+<covid:canBePrevented rdf:resource="http://www.example.com/covid#SurfaceTransmission"/>
+<covid:canBePrevented rdf:resource="http://www.example.com/covid#AirborneTransmission"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#WearAProperlyFittedMask">
+<rdfs:label>Wear a properly fitted mask</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#Precautions"/>
+<covid:canBePrevented rdf:resource="http://www.example.com/covid#DropletsOrAerosols"/>
+<covid:canBePrevented rdf:resource="http://www.example.com/covid#SocialGathering"/>
+<covid:canBePrevented rdf:resource="http://www.example.com/covid#AirborneTransmission"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#CleanHandsFrequently">
+<rdfs:label>Clean hands frequently</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#Precautions"/>
+<covid:canBePrevented rdf:resource="http://www.example.com/covid#DropletsOrAerosols"/>
+<covid:canBePrevented rdf:resource="http://www.example.com/covid#SocialGathering"/>
+<covid:canBePrevented rdf:resource="http://www.example.com/covid#SurfaceTransmission"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#KeepPhysicalDistanceOfAtLeast1Metre">
+<rdfs:label>Keep physical distance of at least 1 metre</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#Precautions"/>
+<covid:canBePrevented rdf:resource="http://www.example.com/covid#DropletsOrAerosols"/>
+<covid:canBePrevented rdf:resource="http://www.example.com/covid#SocialGathering"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#CoverCoughsAndSneezes">
+<rdfs:label>Cover coughs and sneezes</rdfs:label>
+<rdf:type rdf:resource="http://www.examle.com/covid#Precautions"/>
+<covid:canBePrevented rdf:resource="http://www.example.com/covid#DropletsOrAerosols"/>
+<covid:canBePrevented rdf:resource="http://www.example.com/covid#SocialGathering"/>
+<covid:canBePrevented rdf:resource="http://www.example.com/covid#AirborneTransmission"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#StayHomeWhenFeelingUnwell">
+<rdfs:label>Stay home when feeling unwell</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#Precautions"/>
+<covid:canBePrevented rdf:resource="http://www.example.com/covid#SocialGathering"/>
+</rdf:Description>
+
+<!-- OWL Sub Class Definition - First Outbrake -->
+<rdf:Description rdf:about="http://www.example.com/covid#China">
+<rdfs:label>China</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#FirstOutbrake"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#Brazil">
+<rdfs:label>Brazil</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#FirstOutbrake"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#SouthAfrica">
+<rdfs:label>South Africa</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#FirstOutbrake"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#India">
+<rdfs:label>India</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#FirstOutbrake"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#UnitedKingdom">
+<rdfs:label>United Kingdom</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#FirstOutbrake"/>
+</rdf:Description>
+
+<!-- OWL Sub Class Definition - Identified Year -->
+<rdf:Description rdf:about="http://www.example.com/covid#2019">
+<rdfs:label>2019</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#IdentifiedYear"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#2021">
+<rdfs:label>2021</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#IdentifiedYear"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/covid#2020">
+<rdfs:label>2020</rdfs:label>
+<rdf:type rdf:resource="http://www.example.com/covid#IdentifiedYear"/>
+</rdf:Description>
+
+</rdf:RDF>
